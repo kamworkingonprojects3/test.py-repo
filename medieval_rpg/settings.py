@@ -49,14 +49,15 @@ skill_descriptions = {
     "Backstab": "Deal extra damage from behind."
 }
 
-# Player starting stats
+# Player starting stats (normalized to lowercase keys to avoid KeyError)
 class_starting_stats = {
-    "Warrior": {"HP": 100, "Attack": 15, "Defense": 10},
-    "Mage": {"HP": 80, "Attack": 20, "Defense": 5},
-    "Skeleton": {"HP": 70, "Attack": 10, "Defense": 5},
-    "Archer": {"HP": 90, "Attack": 12, "Defense": 8},
-    "Rogue": {"HP": 85, "Attack": 14, "Defense": 6}
+    "Warrior": {"hp": 100, "attack": 15, "defense": 10, "speed": 5, "level": 5},
+    "Mage": {"hp": 80, "attack": 20, "defense": 5, "speed": 6, "level": 5},
+    "Skeleton": {"hp": 70, "attack": 10, "defense": 5, "speed": 7, "level": 5},
+    "Archer": {"hp": 90, "attack": 12, "defense": 8, "speed": 6, "level": 5},
+    "Rogue": {"hp": 85, "attack": 14, "defense": 6, "speed": 8, "level": 5}
 }
+
 
 # Skill colors
 skill_colors = {
