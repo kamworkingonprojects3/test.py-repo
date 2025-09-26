@@ -49,6 +49,9 @@ class_skills_tree = {
 # --- Player Initialization ---
 def initialize_player(player_class):
     stats = class_starting_stats[player_class].copy()
+    if "max_hp" not in stats:
+        stats["max_hp"] = stats["hp"]
+
     if "speed" not in stats:
         stats["speed"] = 5
     player = {
@@ -57,13 +60,14 @@ def initialize_player(player_class):
         "stats": stats,
         "quests": [],
         "xp": 0,
-        "level": 5,
+        "level": 1,
         "gold": 0,
         "items": []
     }
     # Simulate level-ups from 1 → 5
     for _ in range(4):
-        player["stats"]["hp"] += 10
+        player["stats"]["max_hp"] += 10
+        player["stats"]["hp"] = player["stats"]["max_hp"]  # restore full health on level up
         player["stats"]["attack"] += 2
         player["stats"]["defense"] += 2
         player["stats"]["speed"] += 1

@@ -51,11 +51,11 @@ skill_descriptions = {
 
 # Player starting stats (normalized to lowercase keys to avoid KeyError)
 class_starting_stats = {
-    "Warrior": {"hp": 100, "attack": 15, "defense": 10, "speed": 5, "level": 5},
-    "Mage": {"hp": 80, "attack": 20, "defense": 5, "speed": 6, "level": 5},
-    "Skeleton": {"hp": 70, "attack": 10, "defense": 5, "speed": 7, "level": 5},
-    "Archer": {"hp": 90, "attack": 12, "defense": 8, "speed": 6, "level": 5},
-    "Rogue": {"hp": 85, "attack": 14, "defense": 6, "speed": 8, "level": 5}
+    "Warrior": {"max_hp":100,"hp": 100, "attack": 15, "defense": 10, "speed": 5, "level": 5},
+    "Mage": {"max_hp":80,"hp": 80, "attack": 20, "defense": 5, "speed": 6, "level": 5},
+    "Skeleton": {"max_hp":70,"hp": 70, "attack": 10, "defense": 5, "speed": 7, "level": 5},
+    "Archer": {"max_hp":90,"hp": 90, "attack": 12, "defense": 8, "speed": 6, "level": 5},
+    "Rogue": {"max_hp":85,"hp": 85, "attack": 14, "defense": 6, "speed": 8, "level": 5}
 }
 
 
